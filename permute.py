@@ -12,7 +12,7 @@ if f.mode == 'r':
             permute_list.sort()
 
         else:
-            for j in xrange(l, r+1):
+            for j in range(l, r+1):
                 char[l], char[j] = char[j], char[l]
                 permute(char, l+1, r, permute_list)
                 char[l], char[j] = char[j], char[l]
@@ -25,4 +25,4 @@ if f.mode == 'r':
         n = len(line)
         char = list(line)
         permute(char, 0, n-1, permute_list)
-        print ', '.join(permute_list)
+        print(', '.join(permute_list))
